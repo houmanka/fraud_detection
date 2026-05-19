@@ -52,25 +52,18 @@ C-10001,U-9001,2026-05-19T09:12:00Z,email,jane.doe@example.com,"Chargeback on un
   - “Identity verification requirements”
 - The app drafts a recommended action plan/response using those retrieved documents as grounding, not “from memory”.
 
-7) **Similarity search (optional)**
-- The app embeds `subject + description` and searches for similar past cases.
-- It uses the top matches to improve the recommendation:
-  - common resolution steps
-  - typical timelines
-  - “this looks similar to previous case(s)”
-
-8) **Persist outputs**
+7) **Persist outputs**
 - The app stores structured results (case + PII findings + classification + retrieved doc IDs + recommendation) in Postgres (or another store).
 - Optionally it notifies downstream systems (Slack, ticketing, webhook) with a summary.
 
-9) **Human-in-the-loop (optional via signals)**
+8) **Human-in-the-loop (optional via signals)**
 - If the decision is “needs review”, the workflow pauses and waits for an operator signal:
   - `approve_action`
   - `reject_action`
   - `override_policy`
 - On signal, the workflow resumes and continues.
 
-10) **Continue processing remaining rows**
+9) **Continue processing remaining rows**
 - The workflow continues streaming subsequent CSV rows.
 - Processing can run in parallel with a configurable concurrency limit.
 
@@ -90,9 +83,6 @@ flowchart TD
 
   H --> I["Activity: RAG retrieve (policies + playbooks)"]
   I --> J["Draft grounded recommendation"]
-
-  H --> K["(Optional) Activity: embed + similarity search (past cases)"]
-  K --> J
 
   J --> L["Persist results (DB) + notify (optional)"]
 
