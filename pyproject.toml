@@ -1,0 +1,18 @@
+[project]
+name = "file-ingestion"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "google-cloud-pubsub>=2.31.0",
+    "httpx>=0.28.1",
+    "mcp>=1.27.1",
+    "presidio-analyzer>=2.2.362",
+    "temporalio>=1.27.0",
+]
+
+[tool.uv.workspace]
+members = [
+    "localdev/mcp_pii_server/mcp_pii_server",
+]
