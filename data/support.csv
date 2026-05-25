@@ -1,4 +1,4 @@
-case_id,user_id,created_at,channel,email,subject,description,category
+case_id,user_id,created_at,channel,email,subject,description
 C-10001,U-9001,2026-05-19T09:12:00Z,email,jane.doe@example.com,"Chargeback on unknown merchant","I see a $129.99 charge from 'NORTHTRAVEL*ONLINE' on 2026-05-18. I did not authorize this transaction. Please reverse it and block my card.",fraud
 C-10002,U-9002,2026-05-19T09:25:00Z,chat,alex.smith@example.com,"Account locked after login attempt","I got locked out after a few login tries. I was traveling and my IP may have changed. Please help me regain access.",account_access
 C-10003,U-9003,2026-05-19T09:40:00Z,web,priya.k@example.com,"Refund not received","Order #A12345 was refunded last week but I still haven't received it. Can you confirm the refund status?",billing
