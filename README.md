@@ -39,7 +39,7 @@ This project processes them durably, safely, and with an AI pipeline — using T
 |---|---|
 | NFR1 | **Consistency** — vectors must always be generated with the same embedding model |
 | NFR2 | **Resilience** — if one row fails, only that row retries; the entire batch is not re-processed |
-| NFR3 | **Backpressure** — row processing runs with a configurable concurrency limit; Temporal limits are respected |
+| NFR3 | **Backpressure** — row processing runs with a congurable concurrency limit; Temporal limits are respected |
 | NFR4 | **At-least-once delivery** — if the system is down when the file lands, Pub/Sub will redeliver the event |
 
 ---

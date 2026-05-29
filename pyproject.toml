@@ -13,8 +13,18 @@ dependencies = [
     "mcp>=1.27.1",
     "pandas>=3.0.3",
     "presidio-analyzer>=2.2.362",
+    "pytest>=9.0.3",
     "scikit-learn>=1.8.0",
+    "sqlalchemy>=2.0.50",
     "temporalio>=1.27.0",
+    "testcontainers>=4.14.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "testcontainers[postgres]>=4.0.0",
+    "psycopg2-binary>=2.9.0",
 ]
 
 [tool.uv.workspace]

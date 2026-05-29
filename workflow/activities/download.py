@@ -30,7 +30,7 @@ class DownloadActivities:
         itr = self.cloud_storage.iter_text_lines(bucket=arg.path)
 
         # loop over each line
-        for line in itr:
+        # for line in itr:
 
 
         return f"{arg.provider}:{arg.path}"

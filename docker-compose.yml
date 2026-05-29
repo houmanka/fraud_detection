@@ -5,3 +5,21 @@ services:
     command: ["gcloud", "beta", "emulators", "pubsub", "start", "--host-port=0.0.0.0:8085"]
     ports:
       - "8085:8085"
+      -
+  postgres:
+    image: postgres:16
+    container_name: complaint_store_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: complaint_store
+      POSTGRES_USER: app_user
+      POSTGRES_PASSWORD: change_me
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U app_user -d complaint_store"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
