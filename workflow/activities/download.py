@@ -10,6 +10,14 @@ class FileDetails:
     path: str
     provider: str # need to change it to be the cloud client
 
+""" TODO: IMPLEMENT
+    Stream file
+    For each row:
+        MCP pii_classify
+        sanitize/redact
+        classify with your ML model
+        write result to the the postgres 
+"""
 
 
 class DownloadActivities:

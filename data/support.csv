@@ -1,9 +1,0 @@
-case_id,user_id,created_at,channel,email,subject,description
-C-10001,U-9001,2026-05-19T09:12:00Z,email,jane.doe@example.com,"Chargeback on unknown merchant","I see a $129.99 charge from 'NORTHTRAVEL*ONLINE' on 2026-05-18. I did not authorize this transaction. Please reverse it and block my card.",fraud
-C-10002,U-9002,2026-05-19T09:25:00Z,chat,alex.smith@example.com,"Account locked after login attempt","I got locked out after a few login tries. I was traveling and my IP may have changed. Please help me regain access.",account_access
-C-10003,U-9003,2026-05-19T09:40:00Z,web,priya.k@example.com,"Refund not received","Order #A12345 was refunded last week but I still haven't received it. Can you confirm the refund status?",billing
-C-10004,U-9004,2026-05-19T10:05:00Z,phone,lee.chan@example.com,"Possible phishing call","Someone called claiming to be support and asked for a verification code. I did not share it. Is this legitimate?",security
-C-10005,U-9005,2026-05-19T10:20:00Z,email,maria.garcia@example.com,"Update my email address","Please update my email to maria.new@example.com. I no longer have access to the old address.",profile_update
-C-10006,U-9006,2026-05-19T10:45:00Z,web,sam.wilson@example.com,"Card charged twice","My card was charged twice for the same subscription renewal on 2026-05-19. Please refund one of them.",billing
-C-10007,U-9007,2026-05-19T11:00:00Z,email,olivia.brown@example.com,"Unrecognized login from new device","I received an alert for a login from a device I don't recognize in Sydney. Can you check if my account is compromised?",security
-C-10008,U-9008,2026-05-19T11:15:00Z,chat,daniel.ng@example.com,"Promo code abuse report","I think someone is creating multiple accounts to reuse the promo. I saw repeated signups from similar emails.",fraud
